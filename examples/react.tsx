@@ -1,4 +1,3 @@
-cat > examples/react.tsx <<'EOF'
 import { useEffect } from 'react';
 
 export function CursorCrewIntro() {
@@ -23,5 +22,3 @@ export function CursorCrewIntro() {
 
   return null;
 }
-EOF
-

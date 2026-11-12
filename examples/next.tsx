@@ -1,4 +1,3 @@
-cat > examples/next.tsx <<'EOF'
 'use client';
 
 import { useEffect } from 'react';
@@ -24,5 +23,3 @@ export default function CursorCrewIntro() {
 
   return null;
 }
-EOF
-

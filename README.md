@@ -16,6 +16,30 @@ CursorCrew is a TypeScript library built with Canvas 2D and Web Audio. It uses m
 npm install @zenoverse/cursorcrew
 ```
 
+## Automatic Setup
+
+Want to add CursorCrew to an existing portfolio?
+
+Run this command from your project directory:
+
+```bash
+npx @zenoverse/cursorcrew setup
+```
+
+The CLI will:
+1. Detect a supported project structure.
+2. Install CursorCrew if it is not already installed.
+3. Generate the integration component.
+4. Update the recognized application entry point.
+5. Back up the original file before modifying it.
+
+### Currently supported
+
+- Vite + React with a standard `src/main.tsx` or `src/main.jsx` entry.
+- Next.js App Router with a recognized `app/layout` file (experimental; not yet fully tested).
+
+If your project structure is not recognized, the CLI stops rather than guessing how to modify your application.
+
 ## Quick Start
 
 ```ts
