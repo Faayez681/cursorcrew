@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tidepool — tide data for harbours</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0e1319;color:#e8e3d6;font:16px/1.6 system-ui,sans-serif}
+h1,h2,h3{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-weight:600;line-height:1.1;margin:0}
+nav{display:flex;align-items:center;gap:28px;padding:18px 6vw;border-bottom:1px solid #263140}nav b{font:600 22px Georgia,serif;margin-right:auto}nav a{color:#aeb6c2;text-decoration:none;font-size:14px}
+.btn{display:inline-block;padding:11px 20px;border-radius:999px;border:1px solid #5b8fb9;background:#5b8fb9;color:#08111a;font-weight:600;text-decoration:none;font-size:15px}.btn.ghost{background:transparent;color:#e8e3d6;border-color:#3b4a5d}
+.hero{padding:7vh 6vw 4vh;max-width:980px}.hero h1{font-size:clamp(40px,7vw,84px);margin-bottom:20px}.hero p{max-width:560px;color:#aeb6c2;font-size:18px}.hero .row{display:flex;gap:12px;margin-top:26px}
+.wide{margin:0 6vw;width:calc(100% - 12vw);height:220px;object-fit:cover;border-radius:18px;display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:5vh 6vw}
+.card{box-shadow:0 14px 32px rgba(0,0,0,.35);background:#161e28;border:1px solid #263140;border-radius:16px;padding:14px 14px 20px}.card img{width:100%;height:140px;object-fit:cover;border-radius:10px;display:block;margin-bottom:14px}.card h3{font-size:22px;margin-bottom:6px}.card p{margin:0;color:#aeb6c2;font-size:15px}
+h2{font-size:clamp(28px,4vw,44px)}.sec{padding:7vh 6vw 2vh}.sec>p{color:#aeb6c2;max-width:520px;margin:12px 0 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:3vh 6vw}.step{border:1px solid #263140;border-radius:16px;padding:22px}.step b{display:block;font:600 34px Georgia,serif;color:#5b8fb9;margin-bottom:8px}.step h3{font-size:21px;margin-bottom:6px}.step p{margin:0;color:#aeb6c2;font-size:15px}
+.quote{margin:5vh 6vw;padding:40px;border-radius:20px;background:#1b2634}.quote p{font:italic 500 clamp(22px,3vw,32px)/1.3 Georgia,serif;margin:0 0 16px}.quote span{color:#8a97a8;font-size:14px}
+.price{background:#161e28;border:1px solid #263140;border-radius:16px;padding:26px}.price h3{font-size:22px}.price .n{font:600 40px Georgia,serif;margin:10px 0 4px}.price p{margin:0 0 18px;color:#aeb6c2;font-size:15px}
+.cta{margin:2vh 6vw 6vh;padding:48px 40px;border-radius:20px;border:1px solid #3b4a5d;background:linear-gradient(135deg,#1d4e6b 0%,#2b3a67 55%,#5a3b2b 100%);text-align:center}.cta h2{margin-bottom:18px}
+footer a{color:#aeb6c2;text-decoration:underline}.note{opacity:.6}footer{padding:28px 6vw 60px;border-top:1px solid #263140;color:#7f8996;font-size:14px}
+</style></head><body>
+<nav><b style="display:flex;align-items:center;gap:8px"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9" stroke="#5b8fb9" stroke-width="2"/><path d="M4 12c3-3 5 3 8 0s4 0 6-2" stroke="#5b8fb9" stroke-width="2"/></svg>Tidepool</b><a href="#">Stations</a><a href="#">Forecasts</a><a href="#">Pricing</a><a class="btn" href="#">Get access</a></nav>
+<section class="hero"><h1>Every tide, measured to the minute.</h1><p>Tidepool collects readings from 1,900 harbour gauges and turns them into forecasts that pilots, marinas and fishing crews can plan a day around.</p>
+<div class="row"><a class="btn" href="#">Open the map</a><a class="btn ghost" href="#">Read the docs</a></div></section>
+<img class="wide" data-art="0" alt="Tide curve over a harbour">
+<section class="grid">
+<div class="card"><img data-art="1" alt=""><h3>Live gauges</h3><p>Readings refresh every six minutes with a flag when a sensor drifts.</p></div>
+<div class="card"><img data-art="2" alt=""><h3>Seven-day curves</h3><p>Forecasts blend harmonic models with local storm surge observations.</p></div>
+<div class="card"><img data-art="3" alt=""><h3>Alerts that matter</h3><p>Get a message when water will cross the level your slip can handle.</p></div>
+</section>
+<section class="sec"><h2>From gauge to forecast in three steps</h2><p>No hardware to install and nothing to calibrate by hand.</p></section>
+<section class="steps">
+<div class="step"><b>01</b><h3>Pick your harbour</h3><p>Search 1,900 stations or draw a box around the coast you sail.</p></div>
+<div class="step"><b>02</b><h3>Set your limits</h3><p>Tell us the draft of your boat and the tide you can launch in.</p></div>
+<div class="step"><b>03</b><h3>Read the curve</h3><p>Check the next seven days at a glance and plan the tide around it.</p></div>
+</section>
+<img class="wide" data-art="2" alt="Forecast curve">
+<div class="quote"><p>We stopped missing the window at the slipway. The curve is right to the minute.</p><span>Harbour master, small marina</span></div>
+<section class="sec"><h2>Simple pricing</h2><p>Start free and add stations as your fleet grows.</p></section>
+<section class="grid">
+<div class="price"><h3>Deckhand</h3><div class="n">$0</div><p>One station and the next three days.</p><a class="btn ghost" href="#">Start free</a></div>
+<div class="price"><h3>Skipper</h3><div class="n">$12</div><p>Ten stations and the full seven-day view.</p><a class="btn ghost" href="#">Choose plan</a></div>
+<div class="price"><h3>Fleet</h3><div class="n">$49</div><p>Unlimited stations and shared alerts.</p><a class="btn ghost" href="#">Choose plan</a></div>
+</section>
+<section class="cta"><h2>Know the water before you leave the dock.</h2><a class="btn" href="#">Get access</a></section>
+<footer>Tidepool Ltd. Data from public gauge networks. <span class="note">Not for navigation of last resort.</span> <a href="#">Terms of use</a></footer>
+<script type="module" src="/src/main.ts"></script></body></html>
