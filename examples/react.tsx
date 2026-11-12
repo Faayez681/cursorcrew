@@ -1,9 +1,27 @@
+cat > examples/react.tsx <<'EOF'
 import { useEffect } from 'react';
-export function SwarmIntro() {
+
+export function CursorCrewIntro() {
   useEffect(() => {
-    let swarm: { destroy(): void } | undefined, cancelled = false;
-    import('swarm-rebuild').then(({ SwarmRebuild }) => { if (!cancelled) swarm = new SwarmRebuild({ selector: '#root', agents: 80 }); });
-    return () => { cancelled = true; swarm?.destroy(); };
+    let crew: { destroy(): void } | undefined;
+    let cancelled = false;
+
+    import('@zenoverse/cursorcrew').then(({ CursorCrew }) => {
+      if (!cancelled) {
+        crew = new CursorCrew({
+          selector: '#root',
+          agents: 12,
+        });
+      }
+    });
+
+    return () => {
+      cancelled = true;
+      crew?.destroy();
+    };
   }, []);
+
   return null;
 }
+EOF
+

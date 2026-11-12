@@ -1,10 +1,28 @@
-'use client'; // app/swarm-intro.tsx — render <SwarmIntro /> once in app/layout.tsx
+cat > examples/next.tsx <<'EOF'
+'use client';
+
 import { useEffect } from 'react';
-export default function SwarmIntro() {
-  useEffect(() => { // dynamic import keeps the engine out of the server bundle
-    let swarm: { destroy(): void } | undefined, cancelled = false;
-    import('swarm-rebuild').then(({ SwarmRebuild }) => { if (!cancelled) swarm = new SwarmRebuild({ selector: 'body' }); });
-    return () => { cancelled = true; swarm?.destroy(); };
+
+export default function CursorCrewIntro() {
+  useEffect(() => {
+    let crew: { destroy(): void } | undefined;
+    let cancelled = false;
+
+    import('@zenoverse/cursorcrew').then(({ CursorCrew }) => {
+      if (!cancelled) {
+        crew = new CursorCrew({
+          selector: 'body',
+        });
+      }
+    });
+
+    return () => {
+      cancelled = true;
+      crew?.destroy();
+    };
   }, []);
+
   return null;
 }
+EOF
+

@@ -2,3 +2,5 @@
 # Dependencies
 node_modules/
 dist/
+
+dist-lib/
